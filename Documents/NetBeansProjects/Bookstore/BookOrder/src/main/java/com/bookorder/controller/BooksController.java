@@ -38,14 +38,14 @@ private List<Books> getAllBooks()
 return booksService.getAllBooks();
 }
 //creating a get mapping that retrieves the detail of a specific book
-@GetMapping("/book/{bookid}")
-private Books getBooks(@PathVariable("bookid") int bookid) 
+@GetMapping("/book/{isbn}")
+private Books getBooks(@PathVariable("isbn") int bookid) 
 {
 return booksService.getBooksById(bookid);
 }
 //creating a delete mapping that deletes a specified book
-@DeleteMapping("/book/{bookid}")
-private void deleteBook(@PathVariable("bookid") int bookid) 
+@DeleteMapping("/book/{isbn}")
+private void deleteBook(@PathVariable("isbn") int bookid) 
 {
 booksService.delete(bookid);
 }
@@ -54,7 +54,7 @@ booksService.delete(bookid);
 private int saveBook(@RequestBody Books books) 
 {
 booksService.saveOrUpdate(books);
-return books.getBookId();
+return books.getIsbn();
 }
 //creating put mapping that updates the book detail 
 @PutMapping("/books")
