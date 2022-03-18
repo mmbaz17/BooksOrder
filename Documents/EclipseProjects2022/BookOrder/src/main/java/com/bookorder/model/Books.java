@@ -42,53 +42,58 @@ public class Books {
     private String year;
     @Column
     private double price;
+    
     @Column
     private String author;
 
-     public int getCategory() {
-        return quantity;
-    }
+	public int getIsbn() {
+		return isbn;
+	}
 
-    public void setCategory(int quantity) {
-        this.quantity = quantity;
-    }
+	public void setIsbn(int isbn) {
+		this.isbn = isbn;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
-    public String getYear() {
-        return year;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setYear(String year) {
-        this.year = year;
-    }
-    public int getBookId() {
-        return isbn;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setBookid(int isbn) {
-        this.isbn = isbn;
-    }
+	public String getYear() {
+		return year;
+	}
 
-    public String getAuthor() {
-        return author;
-    }
+	public void setYear(String year) {
+		this.year = year;
+	}
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+	public double getPrice() {
+		return price;
+	}
 
-    public double getPrice() {
-        return price;
-    }
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
 }
+    
+    
